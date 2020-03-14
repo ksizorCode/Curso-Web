@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="name"></div>
+
+    <script>
+
+        var letters =[
+            ['a', 'e', 'i', 'o', 'u'],
+            ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
+        ];
+
+        var first = 0;
+            var second =0;
+            var miHTML="";
+            var mi2HTML="";
+
+
+
+        function random(min, max) {
+             return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+
+
+        function namesGen(){
+            for(var i=0; i<5; i++){
+
+                mi2HTML+=name(11);
+
+            }
+
+           
+            return mi2HTML;
+
+        }
+
+
+
+
+        function name(long){
+            var longitud = random(2,long);
+
+            for(var i=0; i<longitud; i++){
+               first= random(0,1);
+              if(first==0){     second = random(0,4);  }
+              else{             second=random(0,20);   }
+
+              miHTML +=letters[first][second];
+            }
+            return '<li>'+miHTML+'</li>';
+        }
+
+    document.getElementById('name').innerHTML=namesGen();
+    
+    </script>
+</body>
+</html>

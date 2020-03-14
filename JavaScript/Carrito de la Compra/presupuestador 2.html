@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{font-family: sans-serif;}
+    </style>
+</head>
+
+<body>
+    <h1>Presupuestador</h1>
+    <button onclick="sumar(0)">Añadir Manzanas</button>
+    <button onclick="sumar(1)">Añadir El QUijote</button>
+    <button onclick="sumar(2)">Añadir Tesla</button>
+    <button onclick="sumar(3)">Añadir Torre Eiffel</button>
+    <ul id="myList"></ul>
+    <p id="txtTotal"></p>
+
+
+    <script>
+        var total = 0;
+
+        var productos = [
+            ['Logotipo','Logotipo simple',150,'logo.jpg'],
+            ['Manual corporativo','Documeto que recoge las espcificaciones técnicas e implementacón del logotipo',500,'manuals.jpg'],
+            ['Infografía 3D','Coche eléctrico de 300 caballos',600,'3d.jpg'],
+            ['Página Web','sDesarrollo de página web',350,'web.jpg']
+        ];
+
+        function addElement(valor) {
+          var node = document.createElement("li");
+          var textnode = document.createTextNode(productos[valor][0]+" +"+productos[valor][2]+"€"+" <button>Eliminar</button>");
+          node.appendChild(textnode);
+          document.getElementById("myList").appendChild(node);
+        }
+
+
+
+
+
+        function sumar(valor) {
+            total+=productos[valor][2];
+            calcular();
+            addElement(valor);
+        }
+
+        function calcular() {
+            
+            document.getElementById('txtTotal').innerHTML = total+"€";
+        }
+
+
+       
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="sort()">Ordenar</button>
+    <button onclick="reverse()">Reverse</button>
+    <div id="mitabla"></div>
+
+    <script>
+        var alumnos = [
+            ['Maria', 'Perez ', '01.jpg'],
+            ['Eva', 'Lopez ', '02.jpg'],
+            ['Javier', 'Lorenzo ', '05.jpg'],
+            ['Antonia', ' Martin', '06.jpg'],
+            ['Madalena', 'García ', '03.jpg'],
+            ['Miguel', 'Mendez ', '04.jpg']
+        ];
+
+
+
+
+        function sort() {
+            alumnos.sort();
+            imprimir();
+        }
+
+        function reverse() {
+            alumnos.reverse();
+            imprimir();
+        }
+
+        function imprimir() {
+            var miHTML = "";
+
+            for (var i = 0; i < alumnos.length; i++) {
+                miHTML += "<li>" + alumnos[i] + "</li>";
+            }
+            document.getElementById('mitabla').innerHTML = miHTML;
+        }
+
+
+
+        imprimir();
+    </script>
+</body>
+
+</html>

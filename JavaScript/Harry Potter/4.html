@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="contenido">
+ <img id="miImagen" src="" />
+ <h2 id="miTitulo"></h2>
+ <p id="miTexto"></p>
+</div>
+ <nav id="lista__personajes">
+ <a onclick="cargaImg('harry')">Harry Potter</a>
+ <a onclick="cargaImg('hermione')">Hermione Granger</a>
+ <a onclick="cargaImg('ron')">Ron Wesley</a>
+ <a onclick="cargaImg('dumbledore')">Dumbledore</a>
+ <a onclick="cargaImg('hagrid')">Hagrid </a>
+
+</nav>
+
+</body><script>
+/* Esto es JavaScript */
+
+var mis_datos = {
+    'harry':{           'img':'Harry.jpg',      'title':'Harry Potter',         'txt':'Esti y el prota de los libros y tal y eso'},
+    'hermione':{        'img':'Hermione.jpg',   'title':'Hermione Granger',     'txt':'Esta es la amiga que le gusta estudiar y los libros y tal y eso'},
+    'ron':{             'img':'Ron.jpg',        'title':'Ron Weasley',          'txt':'Este ye el colega, el que de mayores va a ir con el de copes y tal y eso'},
+    'dumbledore':{      'img':'Dumbledore.jpg', 'title':'Albus Dumbledore',     'txt':'Este es el director del colegio, y sabe mucho y tal y eso'},
+    'hagrid':{          'img':'Hagrid.jpg',     'title':'Rubeus Hagrid',        'txt':'Este es que cuida las mascotas en el colegio y es un gigante y tal y eso'}
+};
+
+
+function cargaImg(archivo){
+    document.getElementById("miImagen").src='img/'+ mis_datos[archivo]['img'];
+    document.getElementById("miTitulo").innerHTML=mis_datos[archivo]['title'];
+    document.getElementById("miTexto").innerHTML=mis_datos[archivo]['txt'];
+}
+
+cargaImg('harry');
+
+</script>
+</html>

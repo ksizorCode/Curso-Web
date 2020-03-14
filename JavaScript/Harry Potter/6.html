@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css"> 
+    <title>Document</title>
+</head>
+
+<body>
+ <a onclick="bgcolor(randomColor(mycolors)) ">Random Color </a>
+</nav>
+
+</body><script>
+/* Esto es JavaScript */
+
+const mycolors = [
+    '#FFFFFF', 
+    '#F06B4F', 
+    '#F2AE52', 
+    '#B0CD6D', 
+    '#A33120'
+];
+
+
+function randomColor(colors) {
+   return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function bgcolor(dato){
+    document.body.style.backgroundColor = dato;
+}
+
+bgcolor(randomColor(mycolors));
+
+</script>
+</html>

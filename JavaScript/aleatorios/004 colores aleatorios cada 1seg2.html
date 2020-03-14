@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    #caja{padding: 20px; text-align: center;}
+    </style>
+</head>
+<body>
+    <div id="caja">Cargando este chisme... </div>
+
+
+    <script>
+        function aleatorio(maximo){
+            var cantidad = Math.floor(Math.random()*maximo);
+            return cantidad;
+        }
+
+        function hex(){
+            var mihex = [
+            '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+            return(mihex[aleatorio(mihex.length)]);
+        }
+
+
+
+        function tipografiar(){
+            var fuentes = [
+                'Arial',
+                'Arial Black',
+                'Arial Narrow',
+                'Times',
+                'Times New Roman',
+                'Comic Sans MS'];
+            return(fuentes[aleatorio(fuentes.length)]);
+        }
+
+
+        
+function lanzar(){
+        
+        var micolorfondo="#"+hex()+hex()+hex()+hex()+hex()+hex();
+        var micolor="rgba("+aleatorio(255)+","+aleatorio(255)+","+aleatorio(255)+",0."+(aleatorio(100)+1)+")"
+
+        document.getElementById('caja').innerHTML=micolor;
+        document.getElementById('caja').style.background=micolor;
+       
+
+        document.body.style.background=micolorfondo;
+
+        document.getElementById('caja').style.fontSize=aleatorio(150)+"px";
+        document.getElementById('caja').style.fontFamily=tipografiar();
+        document.getElementById('caja').style.color=colorear();
+
+
+
+}
+
+setInterval('lanzar()',1000);
+
+    </script>
+</body>
+</html>

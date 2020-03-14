@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #contenido img{ width: 350px;}
+    </style>
+</head>
+<body>
+    <h1>se crean los elementos del desplegable por js</h1>
+    <select id="selectorFruta">
+    </select>
+
+      <div id="contenido">
+          <h1 id="titulo"></h1>
+          <img id="imagen" src="" alt="">
+          <p id="texto"></p>
+      </div>
+      <footer>
+            <a href="selector.html">Siguiente</a>
+        </footer>
+      <script>
+// Array con los valores
+var frutas =[
+  ['Manzana', 'Las naranjas tiene mucha bitamina D','manzana.png'],
+  ['Melocotón','El melocotón hace tal y cual','melocoton.jpg'],
+  ['Naranja','La naranja es de color naranja','naranja.jpg'],
+  ['Kiwi','El Kiwi ye peludillo','kiwi.jpg']
+  ];
+
+// lanza la función lanzar() al cambiar la selección en select
+document.getElementById('selectorFruta').addEventListener('change', lanzar);
+
+//genera a través de un bucle for los elementos necesarios para el select, obtenidos de el array.
+function generadorSelectFruta(){
+    var miHTML="";
+    for(var i=0; i<frutas.length; i++){
+        miHTML +='<option  value="'+i+'" >'+frutas[i][0]+'</option>';
+    }
+    document.getElementById('selectorFruta').innerHTML=miHTML;
+}
+
+// obtiene el valor del elemento seleccionado en el select y luego innerHTML en cada elemento especificado por id del HTML:
+function lanzar(){
+    var valor= document.getElementById('selectorFruta').value;
+    document.getElementById('titulo').innerHTML=frutas[valor][0];
+    document.getElementById('imagen').src="img/"+frutas[valor][2];
+    document.getElementById('texto').innerHTML=frutas[valor][1];
+     }
+
+     generadorSelectFruta();
+     lanzar()
+           
+  
+      </script>
+</body>
+</html>

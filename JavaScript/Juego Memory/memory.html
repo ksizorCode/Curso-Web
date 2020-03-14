@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="">Ordenar</button>
+    <div id="memory"></div>
+
+
+    <script>
+        var tarjetas =['red','red','blue','blue','green','green','pink','pink'];
+        var miHTML="";
+        numerosDesordenados = []; // array vacio
+
+
+// Desordenar valores del array
+        function desordenar(unArray) {
+            var t = unArray.sort(function (a, b) {
+                return (Math.random() - 0.5)
+            });
+            return [...t];
+        } // esta función me desordena un array
+
+
+        for (var i = 0; i < 3; i++) { //creo bucle para llenar array vacío
+            x = desordenar(tarjetas);
+            numerosDesordenados[i] = x;
+            console.log(i, x);
+        }
+        console.log(numerosDesordenados);
+
+
+
+        for(var e=0; e<12;e++){
+            miHTML+="<li>"+numerosDesordenados[e]+"</li>";
+        }
+
+        document.getElementById('memory').innerHTML = miHTML;
+    </script>
+</body>
+
+</html>

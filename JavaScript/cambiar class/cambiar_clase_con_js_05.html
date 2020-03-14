@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{ margin: 0;padding: 0;bottom: 0; box-sizing: border-box;}
+        body {
+            font-family: sans-serif;
+            max-width: 960px;
+            margin: 10px auto;
+        }
+        ul, li{ margin: 0; padding: 0;}
+        li {
+            list-style: none;
+        }
+
+        * {
+            transition: 0.3s;
+        }
+
+        /* Lista*/
+        ul.lista li {
+            clear: both;
+        }
+
+        ul.lista li h2,
+        ul.lista li p {
+            float: left;
+            width: 75%;
+        }
+
+        ul.lista li img {
+            width: 100%;
+            max-width: 120px;
+            float: left;
+            margin: 10px;
+        }
+
+        /* Reticula*/
+        ul.reticula li {
+            width: 20%;
+            float: left;
+            margin: 20px;
+        }
+
+        ul.reticula li img {
+            width: 100%;
+        }
+
+        /* gerry*/
+        ul.gerry li {
+            width: 10%;
+            float: left;
+            margin: 10px;
+        }
+
+        ul.gerry li img {
+            width: 100%;
+        }
+
+        ul.gerry li h2 {
+            font-size: 10px;
+        }
+
+        ul.gerry li p {
+            display: none;
+        }
+
+
+        /* juli*/
+        ul.juli li {
+            width: 10%;
+            float: left;
+            margin: 10px;
+            padding: 10px;
+            border: solid 1px grey;
+            box-shadow: 2px 2px 4px rgba(0,0,0,.3);
+            border-radius: 4px;
+            background: white;
+            
+        }
+
+        ul.juli li:hover {
+            transform: scale(1.5);
+            z-index: 999;
+            box-shadow: 8px 8px 18px rgba(0,0,0,.3);
+
+        }
+
+        ul.juli li img {
+            width: 100%;
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+        ul.juli li:hover img { filter: blur(0);}
+        ul.juli li h2 {
+            font-size: 10px;
+        }
+
+        ul.juli li p {
+            display: none;
+        }
+
+
+        /* joaquin*/
+        ul.joaquin li {
+            width: 10%;
+            float: left;
+            margin: 10px;
+            padding: 10px;
+            border: solid 1px grey;
+            box-shadow: 2px 2px 4px rgba(0,0,0,.3);
+            border-radius: 4px;
+            background: white;
+            margin: 40px;
+            
+        }
+
+        ul.joaquin li:hover {
+            transform: scale(1.5) rotate(10deg);
+            z-index: 999;
+            box-shadow: 8px 8px 18px rgba(0,0,0,.3);
+
+        }
+
+        ul.joaquin li img {
+            width: 100%;
+            border-radius: 50%;
+            filter: grayscale(100%);
+            display: block;
+        }
+
+        ul.joaquin li:hover img { filter: grayscale(0%); z-index: 99999;}
+
+        ul.joaquin li h2 {
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        ul.joaquin li p {
+            display: none;
+        }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <button onclick="cambiarLista()">Cambiar vista</button>
+
+    <h1 id="tipovista">Vista de Lista</h1>
+    <ul id="milista" class="lista">
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                possimus laudantium? Nam.</p>
+        </li>
+        <li>
+                <img src="img/001.jpg" alt="">
+                <h2>Nombre Alumno</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                    fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                    possimus laudantium? Nam.</p>
+            </li>
+            <li>
+                    <img src="img/001.jpg" alt="">
+                    <h2>Nombre Alumno</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                        fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                        possimus laudantium? Nam.</p>
+                </li>
+                <li>
+                        <img src="img/001.jpg" alt="">
+                        <h2>Nombre Alumno</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                            fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                            possimus laudantium? Nam.</p>
+                    </li>
+                    <li>
+                            <img src="img/001.jpg" alt="">
+                            <h2>Nombre Alumno</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                                fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                                possimus laudantium? Nam.</p>
+                        </li>
+                        <li>
+                                <img src="img/001.jpg" alt="">
+                                <h2>Nombre Alumno</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta
+                                    fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores
+                                    possimus laudantium? Nam.</p>
+                            </li>
+    </ul>
+    <script>
+        var estado = 1;
+
+        function cambiarLista() {
+            switch (estado) {
+                case 0:
+                    document.getElementById('milista').className = "lista";
+                    document.getElementById('tipovista').innerHTML = "Lista";
+                    estado=1;
+                    break;
+                case 1:
+                    document.getElementById('milista').className = "reticula";
+                    document.getElementById('tipovista').innerHTML = "Reticula";
+                    estado=2;
+                    break;
+                case 2:
+                    document.getElementById('milista').className = "gerry";
+                    document.getElementById('tipovista').innerHTML = "Gerry Style";
+                    estado=3;
+                    break;
+                case 3:
+                    document.getElementById('milista').className = "juli";
+                    document.getElementById('tipovista').innerHTML = "Juli Pul Style";
+                    estado=4;
+                    break;
+                case 4:
+                    document.getElementById('milista').className = "joaquin";
+                    document.getElementById('tipovista').innerHTML = "Joaquin Style";
+                    estado=0;
+                    break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

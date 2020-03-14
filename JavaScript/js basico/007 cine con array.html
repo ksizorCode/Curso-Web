@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Sala de Cine</title>
+    <!-- Mobile First etiqueta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+  <body>
+
+   <div class="container">
+    <div id="peli" ></div>
+</div>
+
+<script>
+// Estos son comentarios de referencia que no se leen por código y no valen pa na:
+// <img src="http://es.web.img3.acsta.net/r_1280_720/medias/nmedia/18/68/20/31/19014733.jpg"/>
+// <a href="https://disney.es" target="_blank"> El Rey León </a> - Sala 4
+
+//Valores en arrays:
+var peliculas = ["BladeRunner", "Tiburón", "Amelie","Volver"];
+
+
+
+// Programación
+var mitexto='';
+
+mitexto='<ul>';
+mitexto+='<li>'+peliculas[0]+'</li>';
+mitexto+='<li>'+peliculas[1]+'</li>';
+mitexto+='<li>'+peliculas[2]+'</li>';
+mitexto+='<li>'+peliculas[3]+'</li>';
+mitexto+='</ul>';
+
+
+//Imprimir HTML
+function imprimirHTML(contenido){
+    document.getElementById("peli").innerHTML=contenido;
+}
+
+
+imprimirHTML(mitexto);
+
+</script>
+
+  </body>
+</html>

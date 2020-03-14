@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    img{width: 80px;}
+</style>
+<body>
+    <div id="s1">Pelicula</div>
+    <div id="s2">Pelicula</div>
+    <div id="s3">Pelicula</div>
+    <div id="s4">Pelicula</div>
+    <div id="s5">Pelicula</div>
+
+<script>
+  function peli(titulo,id,img,sala){
+    var a="Pelicula: "+titulo+" - "+sala+"<img src='img/"+img+"'/>";
+    document.getElementById(id).innerHTML=a;
+    }
+    
+    peli("Amelie","s1","amelie.jpg","Sala 1");
+    peli("Tiburón","s5","jaws.jpg","Sala 5");
+    peli("Volver","s3","volver.jpg","Sala 3");
+    peli("Blade Runner","s4","br.jpg","Sala 4");
+    peli("Reserboir Dogs","s2","rd.jpg","Sala 2");
+</script>
+
+</body>
+</html>

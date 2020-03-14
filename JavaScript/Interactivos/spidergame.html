@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #spidey {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            z-index: -9;
+            margin-top: 300px;
+            margin-left: 300px;
+            transition: 0.5s;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="" alt="" id="spidey">
+
+    <button onmousewheel="horizontal(1)">Derecha</button>
+    <button onmousewheel="horizontal(-1)">Izquierda</button>
+    <button onmousewheel="vertical(-1)">Arriba</button>
+    <button onmousewheel="vertical(1)">Abajo</button>
+
+
+
+    <script>
+        var x = 0;
+        var y = 0;
+        //  var deg = 0;
+
+        function horizontal(valor) {
+
+            x += 50 * valor;
+            document.getElementById("spidey").style.left = x + "px";
+
+        }
+
+        function vertical(valor) {
+
+            y += 50 * valor;
+            document.getElementById("spidey").style.top = y + "px";
+
+        }
+
+        //   function angular(valor) {
+
+        //        deg += 50 * valor;
+        //        document.getElementById("spidey").style.top = deg + "px";
+
+        //    }
+
+
+
+
+
+        document.getElementById("spidey").style.left = x + "px";
+
+
+
+
+
+        var imagen = "s.png";
+
+        document.getElementById("spidey").src = imagen;
+    </script>
+</body>
+
+</html>

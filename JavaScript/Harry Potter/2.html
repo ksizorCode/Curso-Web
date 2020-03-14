@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+ <img id="miImagen" src="" />
+ <nav id="lista__personajes">
+ <a onclick="cargaImg(0)">Harry Potter</a>
+ <a onclick="cargaImg(1)">Hermione Granger</a>
+ <a onclick="cargaImg(2)">Ron Wesley</a>
+ <a onclick="cargaImg(3)">Dumbledore</a>
+ <a onclick="cargaImg(4)">Hagrid </a>
+</nav>
+
+</body><script>
+/* Esto es JavaScript */
+
+var mis__imagenes=[
+'Harry.jpg',
+'Hermione.jpg',
+'Ron.jpg',
+'Dumbledore.jpg',
+'Hagrid.jpg'
+];  
+
+
+function cargaImg(archivo){
+    document.getElementById("miImagen").src='img/'+ mis__imagenes[archivo];
+}
+
+cargaImg(0);
+
+</script>
+</html>

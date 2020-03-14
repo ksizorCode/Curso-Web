@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8>"
+    </head>
+<body>
+
+<h1 id="demo"></h1>
+
+<script>
+var d = new Date();
+var hora=  d.getHours();
+var texto='queda un poco más oh!';
+
+if(hora>=21){
+    texto="habrá que marchar";
+}
+
+document.getElementById("demo").innerHTML =texto;
+
+</script>
+
+</body>
+</html>

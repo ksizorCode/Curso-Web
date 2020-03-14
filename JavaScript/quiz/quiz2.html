@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="texto"></ul>
+    
+<script>
+    //Listado de preguntas en el Array
+    // Primer valor 0 es la pregunta, valores 1 a 4 las respuestas y el valor 5 es el número de la la respuesta correcta.
+    var preguntas=[
+        ['¿A que casa pertenece Harry Potter?','Gringots','Griffindor','Slicerin','Barça',1],
+        ['Cual fue la priemra novia de Spiderman','Widney Gyuston','Widney Steisy','Mary Jane','Real Oviedo',2],
+        ['¿A que casa pertenece Harry Potter?','Gringots','Griffindor','Slicerin','Barça',1],
+        ['¿A que casa pertenece Harry Potter?','Gringots','Griffindor','Slicerin','Barça',1],
+        ['¿A que casa pertenece Harry Potter?','Gringots','Griffindor','Slicerin','Barça',1],
+        ['¿A que casa pertenece Harry Potter?','Gringots','Griffindor','Slicerin','Barça',1],
+        ['¿A que casa pertenece Harry Potter?','Gringots','Griffindor','Slicerin','Barça',1],
+        ['¿A que casa pertenece Harry Potter?','Gringots','Griffindor','Slicerin','Barça',1],
+        ['¿A que casa pertenece Harry Potter?','Gringots','Griffindor','Slicerin','Barça',1]
+    ];
+
+
+// creamos una variable donde almacenar el contenido que saldrá por pantalla
+var miHTML="";
+
+// hacemos un bucle for, que se repetirá tantas veces como elementos tenga el array preguntas
+for(var i=0; i<preguntas.length; i++){
+    // añadimos ( concatenamos ) los textos que queremos que aparezcan en pantalla
+    // primero aparece un li con la pregunta
+miHTML+='<li>'+preguntas[i][0]+'</li>';
+// luego añadiremos ( concatenaremos ) otra lista debajo del li con la pregunta, donde aparecerán todas las respuestas
+miHTML+='<ol>';
+    miHTML+='<li><input type="radio" value="'+i+'" name="q'+i+'">'+preguntas[i][1]+'</li>';
+    miHTML+='<li><input type="radio" value="'+i+'" name="q'+i+'">'+preguntas[i][2]+'</li>';
+    miHTML+='<li><input type="radio" value="'+i+'" name="q'+i+'">'+preguntas[i][3]+'</li>';
+    miHTML+='<li><input type="radio" value="'+i+'" name="q'+i+'">'+preguntas[i][4]+'</li>';
+miHTML+='</ol>';
+}
+
+// esta estructura se repetirá en cada pregunta tantas preguntas ( elementos de array) como existan
+
+
+// finalmente imprimimos dentro de la ul id="texto" el contenido que se ha idio almacenando en miHTML
+
+    document.getElementById('texto').innerHTML=miHTML;
+</script>
+</body>
+</html>

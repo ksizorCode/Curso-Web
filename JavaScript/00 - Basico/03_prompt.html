@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaSript 20/09</title>
+</head>
+<body>
+    
+<div id="caja"></div>
+
+
+<script>
+//Ahora vamos a jugar con prompt
+
+var micolor=prompt("Pon tu color favorito en ingles");
+var bgcolor=prompt("Elige el color de tu fondo")
+var texto="<h1>Hola, soy un texto en tu color favorito</h1>";
+
+document.getElementById('caja').innerHTML=texto;
+document.getElementById('caja').style.color=micolor;
+document.body.style.background=bgcolor;
+
+</script>
+
+</body>
+</html>

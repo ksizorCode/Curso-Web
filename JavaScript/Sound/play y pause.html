@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+</head>
+<body>
+ 
+<div>
+	<input type="button" value="Play" id="play">
+    <input type="button" value="Pause" id="pause">
+    <button onclick="lanzarS()">hola</button>
+</div>
+ 
+
+<script>
+		// creamos el objeto audio
+		var audioElement = document.createElement('audio');
+ 
+		// indicamos el archivo de audio a cargar
+		audioElement.setAttribute('src', 'beep.mp3');
+ 
+		// Si deseamos que una vez cargado empieze a sonar...
+		//audioElement.setAttribute('autoplay', 'autoplay');
+ 
+		document.getElementById("play").addEventListener("click", function() {
+			// Si deseamos que inicie siempre desde el principio
+			//audioElement.currentTime = 0;
+ 
+			// iniciamos el audio
+			audioElement.play();
+		});
+ 
+		document.getElementById("pause").addEventListener("click", function() {
+			// hacemos pausa
+			audioElement.pause();
+		});
+
+
+
+
+
+        function lanzarS(){
+        audioElement.play();
+    }
+
+
+
+	</script>
+</body>
+</html>

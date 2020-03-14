@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+<style>
+body{
+    background: #F7F7F7;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: -99;
+}
+
+
+</style>
+</head>
+
+<body>
+ <button onmousewheel='mover (-1)'>izd</button>
+ <button onclick='mover(1)'>dch</button>
+ <button onclick='arriba(-1)'>up</button>
+ <button onclick='arriba(1)'>down</button>
+ 
+
+<img id="dino">
+
+
+    <script>
+var x= 50;
+var y =50;
+
+function mover(valor){
+    x +=10*valor;
+    document.getElementById('dino').style.left=x+"px";
+
+}
+
+function arriba(valor){
+    y +=10*valor;
+    document.getElementById('dino').style.top=y+"px";
+
+}
+
+mover(1);
+var imagen = 'dino.png';
+document.getElementById('dino').src=imagen;
+     
+    </script>
+
+</body>
+
+</html>

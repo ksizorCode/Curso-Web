@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+ 
+
+        <input id="inpt" type="text" placeholder="tabla del..">
+        <input id="inpt2" type="text" placeholder="¿hasta dónde?">
+
+        <button onclick="multiplicar()">¡MULTIPLICA!</button>
+       
+
+        <ul id="tablamultiplicar">
+            <li></li>
+        </ul>
+
+        <button onclick="masUno()">¡AÑADE UNO (+1)!</button>
+
+    <script>
+
+
+
+        // cliente, de aqui abajo no toques na
+
+
+//FUNCION MULTIPLICAR
+
+        function multiplicar() {
+
+            var multiplicando = document.getElementById("inpt").value;
+            var numMax = document.getElementById("inpt2").value;
+
+            var miHTML = "";
+            for (var i = 1; i <= numMax; i++) {
+                var resultado = multiplicando + " x " + i + " = " + multiplicando * i;
+                miHTML += "<li>" + resultado + "</li>";
+            }
+
+            document.getElementById("tablamultiplicar").innerHTML = miHTML;
+            //alert(miHTML)
+
+        }
+
+
+        //FUNCION MAS UNO
+
+        function masUno() {
+            // obtenemos el valor del input
+            var valorDelImput = document.getElementById("inpt").value;
+            // le sumamos uno
+            valorDelImput++;
+            // devolvermos el valor al input actualizado
+            document.getElementById("inpt").value=valorDelImput;
+
+// document.getElementById("inpt").value++
+
+            // llamamos a la función para que ejecute todo el cálculo
+            multiplicar();
+}
+document.getElementById("tablamultiplicar").innerHTML = miHTML;
+
+    </script>
+
+
+</body>
+
+</html>

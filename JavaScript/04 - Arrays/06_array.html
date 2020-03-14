@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    
+    body{ max-width:550px; margin: 10px auto;}
+    img{width:100%;}
+
+
+    ul li{ background:#EEE; margin: 10px; list-style: none; overflow: hidden; padding: 12px; margin: 20px;}
+    ul li img{ max-width: 200px; float: right; display: block;}
+
+    /* ul li img{opacity: 0; position: fixed; top:10px; right: 30px;}
+     ul li:hover img{opacity: 1;}
+     */
+
+    .Gryffindor{ background: red; color: yellow}
+    .Ravenclaw{ background: blue; color:whitesmoke}
+    .Slytherin{ background: green; color:thistle}
+    
+    
+    </style>
+</head>
+<body>
+    <select name="personajes" id="miValor">
+        <option selected value="0"> Harry Potter </option>
+        <option value="1">Hermione Vista</option> 
+        <option value="2">Ron</option> 
+        <option value="3">Draco</option> 
+        <option value="4">Luna</option> 
+        <option value="5">Voldemort</option> 
+        <option value="6">Dumbledore</option> 
+    </select>
+    
+    <button onclick="lanzarEnPantalla()">Cargar</button>
+    <div id="demo"></div>
+    <button onclick="cerrar()">Cerrar</button>
+
+    <script>
+        var personajes =[
+            ['Harry','Potter','Gryffindor','hp.png'],
+            ['Hermione','Granger','Gryffindor','hg.png'],
+            ['Ron','Weasley','Gryffindor','rw.png'],
+            ['Draco','Malfoy','Slytherin','dm.png'],
+            ['Luna','Lovegood','Ravenclaw','l.png'],
+            ['Voldemort','','Slytherin','v.png'],
+            ['Albus','Dumbledore','Gryffindor','albus.png'],
+            ];
+
+function lanzarEnPantalla(){
+    var i = document.getElementById("miValor").value;
+
+
+        var miTexto="<ul>";
+           
+                miTexto+="<li><img src='img/"+personajes[i][3]+"'><h2>"+personajes[i][0]+" "+personajes[i][1]+"</h2> <p class='"+personajes[i][2]+"'>Casa: "+personajes[i][2]+"</p></li>";
+
+        miTexto+="</ul>"
+           document.getElementById('demo').innerHTML=miTexto; 
+        }
+
+function cerrar(){
+    document.getElementById('demo').innerHTML=""; 
+
+}
+    </script>
+</body>
+</html>

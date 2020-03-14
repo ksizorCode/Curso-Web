@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{margin:0; border: 0; padding: 0; box-sizing: border-box; font-family: sans-serif;}
+
+    body{ width: 400px; margin: 20px auto;}
+    ul{ font-size: 12px;}
+    ul li{ margin-top: 20px; margin-bottom: 10px; list-style: none;}
+    ul ol li{ margin:5px; margin-left: 40px;}
+    ul ol li input{ margin: 0 10px;}
+    
+    button{ padding:5px; margin: 10px;}
+    
+    </style>
+</head>
+<body>
+<form>
+    <ul id="texto"></ul>
+    <button onclick="comprobar()">Finalizar Test</button>
+</form>
+<script>
+    //Listado de preguntas en el Array
+    // Primer valor 0 es la pregunta, valores 1 a 4 las respuestas y el valor 5 es el número de la la respuesta correcta.
+    var preguntas=[
+        ['¿A que casa pertenece Harry Potter?','Gringots','Griffindor','Slicerin','Barça',1],
+        ['¿Cual fue la primera novia de Spiderman?','Whitney Houston','Whitney Steisy','Mary Jane','Lois Lane',2]
+    ];
+
+
+function respuesta(pregunta,respuesta){
+    miHTML+='<li>';
+    miHTML+='<input type="radio" value="q'+pregunta+respuesta+'" name="q'+pregunta+'" id="q'+pregunta+respuesta+'">';
+    miHTML+='<label for="q'+pregunta+respuesta+'">'+preguntas[pregunta][respuesta]+'</label>';
+    miHTML+='</li>';
+}
+
+
+
+// creamos una variable donde almacenar el contenido que saldrá por pantalla
+var miHTML="";
+
+// hacemos un bucle for, que se repetirá tantas veces como elementos tenga el array preguntas
+for(var i=0; i<preguntas.length; i++){
+    // añadimos ( concatenamos ) los textos que queremos que aparezcan en pantalla
+    // primero aparece un li con la pregunta
+miHTML+='<li>'+preguntas[i][0]+'</li>';
+// luego añadiremos ( concatenaremos ) otra lista debajo del li con la pregunta, donde aparecerán todas las respuestas
+miHTML+='<ol>';
+    respuesta(i,1);
+    respuesta(i,2);
+    respuesta(i,3);
+    respuesta(i,4);
+miHTML+='</ol>';
+}
+
+
+function comprobar(){
+
+    for(var i=0; i<preguntas.length; i++){
+        var idPasada='q'+i+
+        var respuestaDada=document.getElementById().value;
+        var respuestaCorrecta=preguntas[i][5];
+
+        if(respuestaDada==respuestaCorrecta){
+            alert(i+"ta bien")
+        }
+        else{alert(i+"no ta bien");}
+    }
+
+
+}
+
+
+
+
+// esta estructura se repetirá en cada pregunta tantas preguntas ( elementos de array) como existan
+
+
+// finalmente imprimimos dentro de la ul id="texto" el contenido que se ha idio almacenando en miHTML
+
+    document.getElementById('texto').innerHTML=miHTML;
+</script>
+</body>
+</html>

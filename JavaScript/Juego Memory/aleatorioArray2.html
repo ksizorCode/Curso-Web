@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{ margin: 0;bottom: 0;padding: 0;outline: none; box-sizing: border-box;;}
+
+    li{ width: 200px; height: 200px; border: solid white 9px; box-shadow: 3px 5px 8px rgba(0,0,0,.7); border-radius: 20px; list-style: none; margin: 6px; float: left; padding: 20px; text-align: center;}
+</style>
+
+<body>
+    <button onclick="imprimir()">Desordenar Array</button>
+
+    <p id="demo"></p>
+
+    <script>
+        //LIsta de colores de las cartas
+        var cartas = ['red', 'red', 'blue', 'blue', 'green', 'green','yellow','yellow','pink','pink'];
+
+        // función para desordenar los elementos del array
+        function desordenar() {
+            cartas.sort(function (a, b) {
+                return 0.5 - Math.random()
+            });
+            document.getElementById("demo").innerHTML = cartas;
+        }
+
+
+
+var pasada =0;
+var carta1="";
+var carta2="";
+
+function carta(unaVariable){
+    alert(unaVariable);
+    if(pasada=0){
+        carta1=unaVariable;
+        pasada=1;
+    }
+    else{
+        carta2=unaVariable;
+        pasada=0;
+        if(carta1==carta2){
+            alert("son iguales");
+        }
+        else{
+            alert("no son iguales");
+        }
+    }
+
+alert(carta1+" - "+carta2);
+
+}
+
+
+        function imprimir() {
+        // lanzo la función para desordenar
+        desordenar();
+
+        var miHTML = "";
+        for (var i = 0; i < cartas.length; i++) {
+            miHTML += "<li style='background:"+cartas[i]+"' onclick='carta(\""+cartas[i]+"\");'>" + cartas[i] + "</li>";
+        }
+
+        document.getElementById('demo').innerHTML = miHTML;
+        }
+
+        imprimir();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="hello"></div>
+    <script>
+        function aleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+
+        function loteria() {
+            //  var nombrepersona = "Juanito";
+            var alumnos = [
+                "Miguel",
+                "Joaquín",
+                "Juli",
+                "Rosi",
+                "Juan",
+                "Nelly",
+                "Jose",
+                "Mua"
+            ];
+
+            var tareas = [
+                "Ir al cine",
+                "Tomar un café",
+                "Echar un pitu",
+                "Ir de excursión",
+                "Ir a comer pulpu",
+                "Recibe 1 millón de euros",
+                "Ir a patinar",
+                "Salir de clase",
+                "Suspender el examen", ,
+                "Dar un abrazo",
+                "Leer en chino",
+                "Pagar unes sidres",
+                "Dar una bofetada",
+                "Comer bocata calamaca",
+                "Dar 1000 euros a alguien"
+
+
+            ];
+
+var num= aleatorio(0, (alumnos.length-1));
+
+            alert("A " +alumnos[num] + " le ha tocado " + tareas[aleatorio (0, (tareas.length))]+" "+ "con " +alumnos[(num+1)]);
+        }
+        //alert(Math.ceil(Math.random(1) * 10));
+        loteria();
+    </script>
+
+
+
+</body>
+
+</html>

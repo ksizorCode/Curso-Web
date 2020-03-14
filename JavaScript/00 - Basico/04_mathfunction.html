@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaSript 20/09</title>
+</head>
+<body>
+    
+<div id="caja"></div>
+
+
+<script>
+//Ahora toca Math investigar random
+
+function redondear(aredondear){
+    var contenido=Math.floor(aredondear);
+    return contenido;
+
+
+}
+
+function aleatorio(maximo){
+var numerin=Math.random(maximo);
+return numerin;
+
+}
+
+function redondeoCurioso(){
+   return redondear(aleatorio(500)*100);
+}
+
+//var suma=redondear(aleatorio(500)*100);
+//document.getElementById('caja').innerHTML=suma;
+
+document.getElementById('caja').innerHTML=redondeoCurioso();
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* Esto es el Reset 
+box-sizing:border-box aquí metido permite que todos los elementos que tengan padding y border no vean incrementado su tamaño. Es decir, que si tengo un elemento con un width:100 y un padding:20 + un border 5; el elemento siga midiendo 100 de width; en lugar de 100 de width + 20 de pading left + 20 de pading right + 5 de border left + 5 de border right = 150px en total. */
+ 
+* {   margin: 0;   padding: 0;   border: 0;   box-sizing: border-box;}
+ 
+/* esto al final no lo usamos */
+html{}
+ 
+ 
+body{ font-family: Helvetica, Arial, Verdana, sans-serif; color: #808080; }
+ 
+h1, h2, h3, h4, h5, h6{}
+ 
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+h6{}
+ 
+/* todos los enlaces de la página no tendrá linea por debajo*/
+a{ text-decoration: none;}
+a:hover{}
+ 
+/* todos los párrafos de la página tendrán un margen por debajo de 10px /
+p{ margin-bottom:10px;}
+ 
+/* los enlaces que estén dentro de los párrafos tendrán una linea por debajo al pasar el raton x encima */
+p a:hover{ text-decoration:underline;}
+ 
+/* los h, los enlaces dentro de parrafos, los a dentro li y dentro de aside serán de color naranja*/
+h1, h2, h3, h4, h5, p a, aside li a{ color: #FF4500;}
+ 
+/* header, footer y main serán de un tamaño máximo de 960px y se centrarán con margin 0 auto*/
+header, footer, main{max-width: 960px; margin: 0 auto;}
+ 
+/* header respetará el alto de los elementos hijos que tengan float */
+header{ overflow: hidden;}
+header h1{ width: 220px; line-height: 18px; float: left; padding-left:66px; padding-top: 5px; background: url(../img/logo.jpg) left top no-repeat }
+header h1 span{font-size: 12px; color: #808080;}
+ 
+/* tanto header nav como header h1 se apilan a un lado y a otro con float. Recuerda que para que float funciona ha de darse un width*/
+header nav{ max-width: 400px; float: right;}
+header nav ul{}
+header nav ul li{ display: inline-block;}
+header nav ul li a{ display: block; background: #ccc; padding: 10px; color: black}
+header nav ul li a:hover{background: orange; color: white}
+ 
+ 
+/* main respetará la altura de los elementos hijos que tengan float */
+main{ overflow: hidden;}
+ 
+/* seccion dentro de main ocupará un 75% y se apilará a la right */
+main section{ width: 75%; float: right; }
+ 
+/* aside dentro de main ocupará un 25% y se apilará a la left, además tendrá un pagindg right de 30px */
+main aside { width:25%; float: left; padding-right: 30px; }
+main aside li{ text-align: right; border-bottom: solid #eee 2px; padding: 4px 8px 4px 4px; background: url(../img/img03.jpg) center right no-repeat; }
+ 
+ 
+ 
+div.grisgrandon{background: #eeeeee; padding: 20px; margin: 8px 0;}
+ 
+ 
+footer{}
+footer p{text-align: center;}
+ 
+nav li{ list-style: none;}

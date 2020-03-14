@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java</title>
+</head>
+
+<body>
+
+    <div id="mono">
+
+    </div>
+
+    <script>
+        function aleatorio(valor){
+            var miAleatorio = Math.floor(Math.random() * valor);
+            return miAleatorio;
+        }
+        function saludar() {
+            var saludos = [
+                /* 0 */ "Hola ",
+                /* 1 */ "Hi ",
+                /* 2 */ "Hello ",
+                /* 3 */ "marhabaan ",
+                /* 4 */ "Ciao ",
+                /* 5 */ "privet ",
+                /* 6 */ "Que lo que ",
+                /* 7 */ "Hallo ",
+                /* 8 */ "barev ",
+                /* 9 */ "Alo ",
+                /* 10 */"Salut ",
+                /* 11 */"Kon'nichiwa ",
+                /* 12 */"Salve"
+            ];
+            var todo=saludos.length;
+            //var aleatorio=Math.floor(Math.random() * todo); 
+            var mensaje=saludos[aleatorio(todo)];
+           return(mensaje);
+        }
+        //alert(saludar());
+
+        document.getElementById("mono").innerHTML=saludar();
+        document.getElementById("mono").style.background='#CCCCCC';
+        document.getElementById("mono").style.background='#CCCCCC'
+    </script>
+
+</body>
+
+</html>

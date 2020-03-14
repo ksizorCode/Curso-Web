@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	background: greenyellow;
+}
+
+body {
+	max-width: 960px;
+	margin: 0 auto;
+	background: white;
+	padding: 50px;
+	box-sizing: border-box;
+}
+
+header {
+	text-align: center;
+}
+
+header h2 {
+	font-size: 44px;
+	letter-spacing: 5px;
+	text-transform: uppercase
+}
+
+header nav ul li {
+	padding: 10px;
+
+}
+
+header nav ul li a {
+	text-decoration: none;
+	color: yellowgreen;
+	font-size: 22px;
+	border-radius: 20px;
+	display: block;
+	padding: 20px;
+	margin: 0 5px
+	
+}
+
+header nav ul li a:hover {
+	background: yellowgreen;
+	color: white
+}
+
+nav li {
+	display: inline-block
+}
+
+img {
+	width: 100%
+}

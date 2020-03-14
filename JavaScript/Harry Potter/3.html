@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css"> 
+    <title>Document</title>
+</head>
+
+<body>
+<div id="contenido">
+ <img id="miImagen" src="" />
+ <h2 id="miTitulo"></h2>
+ <p id="miTexto"></p>
+</div>
+ <nav id="lista__personajes">
+ <a onclick="cargaImg(0)">Harry Potter</a>
+ <a onclick="cargaImg(1)">Hermione Granger</a>
+ <a onclick="cargaImg(2)">Ron Wesley</a>
+ <a onclick="cargaImg(3)">Dumbledore</a>
+ <a onclick="cargaImg(4)">Hagrid </a>
+ <a onclick="myrandom()">Random </a>
+</nav>
+
+</body><script>
+/* Esto es JavaScript */
+
+var mis_datos = [
+    ['Harry.jpg', 'Harry Potter', 'Esti y el prota de los libros y tal y eso'],
+    ['Hermione.jpg', 'Hermione Granger','Esta es la amiga que le gusta estudiar y los libros y tal y eso'],
+    ['Ron.jpg', 'Ron Weasley', 'Este ye el colega, el que de mayores va a ir con el de copes y tal y eso'],
+    ['Dumbledore.jpg', 'Albus Dumbledore', 'Este es el director del colegio, y sabe mucho y tal y eso'],
+    ['Hagrid.jpg', 'Rubeus Hagrid','Este es que cuida las mascotas en el colegio y es un gigante y tal y eso']
+];
+
+
+function cargaImg(archivo){
+    document.getElementById("miImagen").src='img/'+ mis_datos[archivo][0];
+    document.getElementById("miTitulo").innerHTML=mis_datos[archivo][1];
+    document.getElementById("miTexto").innerHTML=mis_datos[archivo][2];
+}
+
+function myrandom(){
+    var max_num= mis_datos.length;
+    var random_num = Math.floor((Math.random() *  max_num));
+    cargaImg(random_num);
+}
+
+myrandom()
+
+</script>
+</html>

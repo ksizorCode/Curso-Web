@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #contenido img{ width: 350px;;}
+    </style>
+</head>
+<body>
+    <h1>Carga elementos tras seleccionar y hacer click en boton</h1>
+    <select id="selectorFruta">
+        <option  value="0" >Manzana</option>
+        <option value="1">Melocotón</option>
+        <option selected value="2">Naranja</option>
+        <option value="3">Kiwi</option>
+      </select>
+      <button onclick="lanzar()">Cargar Elemento</button>
+
+      <div id="contenido">
+          <h1 id="titulo"></h1>
+          <img id="imagen" src="" alt="">
+          <p id="texto"></p>
+      </div>
+
+      <footer>
+          <a href="selector_01.html">Siguiente</a>
+      </footer>
+      <script>
+// Array con los valores
+var frutas =[
+    ['Manzana', 'Las naranjas tiene mucha bitamina D','manzana.png'],
+    ['Melocotón','El melocotón hace tal y cual','melocoton.jpg'],
+    ['Naranja','La naranja es de color naranja','naranja.jpg'],
+    ['Kiwi','El Kiwi ye peludillo','kiwi.jpg']
+    ];
+
+
+function lanzar(){
+// obtiene el valor del elemento seleccionado en select
+// y lo almacena en una variable llamda valor
+  var valor= document.getElementById('selectorFruta').value;
+// carga el elemento del array, equivalente al valor del select
+  document.getElementById('titulo').innerHTML=frutas[valor][0];
+  document.getElementById('imagen').src="img/"+frutas[valor][2];
+  document.getElementById('texto').innerHTML=frutas[valor][1];
+  }
+
+// Lanza la función, para que la página no aparezca sin contenido al iniciar
+lanzar()
+           
+      </script>
+</body>
+</html>

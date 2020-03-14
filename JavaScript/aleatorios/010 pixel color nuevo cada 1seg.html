@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{width:550px; margin: 0 auto; }
+
+        .muestra {
+            text-align: center;
+            width: 10px;
+            height:10px;
+            float: left;
+            list-style: none;
+        }
+
+        .muestra:hover {
+            transform: scale(1.5);
+            box-shadow: 8px 8px 8px rgba(0, 0, 0, .6);
+            border-radius: 2%;
+        }
+
+        .muestra {
+            transition: 0.1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="lista"></div>
+
+
+    <script>
+
+var limite=10;
+
+var cantidad=0;
+
+
+
+        function aleatorio(maximo) {
+            var cantidad = Math.floor(Math.random() * maximo);
+            return cantidad;
+        }
+
+        function hex() {
+            var mihex = [
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'
+            ];
+            return (mihex[aleatorio(mihex.length)]);
+        }
+
+        function colorAleatorio() {
+            var mycolor = "#" + hex() + hex() + hex() + hex() + hex() + hex();
+            return mycolor;
+        }
+
+
+
+
+    
+        document.body.style.background = colorAleatorio();
+
+
+
+        function crearMuestra() {
+            var auxiliar = colorAleatorio();
+            var codigo = "<li class='muestra' style='background:" + auxiliar + "'></li>"
+            return codigo;
+        }
+
+
+        function sumarMuestra(){
+            document.getElementById('lista').innerHTML += crearMuestra();
+
+      
+        }
+
+        setInterval('sumarMuestra()',100);
+        
+    </script>
+</body>
+
+</html>

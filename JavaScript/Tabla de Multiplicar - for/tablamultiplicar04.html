@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{margin: 0;padding: 0;bottom: 0;box-sizing: border-box; font-family: sans-serif;}
+    body{max-width: 550px; margin: 10px auto;}
+
+
+            #mensaje p {
+        
+                width: 200px;
+                height:200px;
+                border-radius: 10px;
+                padding:20px;
+                background-color:red;
+                color:white;
+            }
+
+            .resultado{ font-weight: bold;}
+            
+            </style>
+</head>
+
+<body>
+
+    
+ 
+
+        <input id="inpt" type="text" placeholder="nº" col="5" size="2">
+        <input id="inpt3" type="text" placeholder="1" size="3" value="1">
+        <input id="inpt2" type="text" placeholder="fin" size="3">
+
+
+        <button onclick="comprobar()">¡MULTIPLICA!</button>
+        <button onclick="masUno()">+1</button>
+        <button onclick="menosUno()">-1</button>
+
+        <div id="mensaje"></div>
+
+        <ul id="tablamultiplicar"></ul>
+        <button onclick="addFila()">Añadir fila</button>
+
+    <script>
+
+        var textoAlerta ="<p>Revise que los campos son correctos</p>";
+        var textoAlertaExceso ="<p>Porfavor inserte un valor menor</p>";
+
+
+
+
+
+/////// DE AQUÍ PA ABAJO PROGRAMACIÓN, NO SE TOCA //////////
+
+////////////////////////////////  FUNCION COMPROBAR //////////////////////////////
+
+        function comprobar(){
+            // obtenemos los 
+            var in1= document.getElementById("inpt").value;
+            var in2= document.getElementById("inpt2").value;
+            var in3= document.getElementById("inpt3").value;
+            if(in1=="" || in2=="" || in1==null || in2==null || in2<=0 ){
+                document.getElementById("mensaje").innerHTML=textoAlerta;
+            }
+            else if( in2>10000){
+                document.getElementById("mensaje").innerHTML=textoAlertaExceso;
+            }
+
+
+            else{
+                document.getElementById("mensaje").innerHTML="";
+                multiplicar();
+            }
+
+        }
+
+
+////////////////////////////////  FUNCION MULTIPLICAR //////////////////////////////
+
+        function multiplicar() {
+            // almaceno en variables los valores de los inputs del HTML
+            var multiplicando = document.getElementById("inpt").value;
+            var numMax = document.getElementById("inpt2").value;
+            var numMini = document.getElementById("inpt3").value;
+            // creo una variable donde almacenaré todo el texto que más adelante sacaré por pantalla
+            var miHTML = "";
+            // hago un bucle que se pepita tantas veces como le indique en el input2
+            for (var i = numMini; i <= numMax; i++) {
+                // meto en una variable el texto que quiero que se imprima en esta iteración
+                var resultado = multiplicando + " x " + i + " = <span class='resultado'>" + multiplicando * i+"</span>";
+                //añado ese texto ( concateno ) a la variable que imprimire en pantalla
+                miHTML += "<li>" + resultado + "</li>";
+            }
+            // imprimo la varriable en pantalla
+            document.getElementById("tablamultiplicar").innerHTML = miHTML;
+            
+            // en el caso de que falte algun valor, lo anterio no nos mostrará nada, y lanzaremos la función comprobar() que hará que se nos muestre una mensaje en pantalla
+      
+        }
+
+
+////////////////////////////////  FUNCION MÁS UNO //////////////////////////////
+
+        function masUno() {
+            // obtenemos el valor del input
+            var valorDelImput = document.getElementById("inpt").value;
+            // le sumamos uno
+            valorDelImput++;
+            // devolvermos el valor al input actualizado
+            document.getElementById("inpt").value=valorDelImput;
+
+            // document.getElementById("inpt").value++
+
+            // llamamos a la función para que ejecute todo el cálculo
+            comprobar();
+        }
+
+
+
+
+////////////////////////////////  FUNCION MÁS UNO //////////////////////////////
+
+function menosUno() {
+            document.getElementById("inpt").value--
+            // llamamos a la función para que ejecute todo el cálculo
+            comprobar();
+        }
+
+
+
+////////////////////////////////  FUNCION AÑADIR FILA //////////////////////////////
+
+
+        function addFila(){
+            document.getElementById("inpt2").value++
+            // llamamos a la función para que ejecute todo el cálculo
+            comprobar();
+        }
+
+
+
+document.getElementById('inpt').addEventListener('change',comprobar);
+document.getElementById('inpt2').addEventListener('change',comprobar);
+document.getElementById('inpt3').addEventListener('change',comprobar);
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

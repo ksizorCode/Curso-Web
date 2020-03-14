@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{ font-family: sans-serif; width: 960px; margin: 10px auto;}
+        li{ list-style: none;}
+
+/* Lista*/        
+        ul.lista li{clear:both;}
+        ul.lista li h2,
+        ul.lista li p{ float: left; width: 75%;}
+        ul.lista li img{ width:100%; max-width: 120px; float: left; margin: 10px;}
+
+/* Reticula*/
+        ul.reticula li{ width:20%; float: left; margin: 20px;}
+        ul.reticula li img{ width:100%;}
+
+
+    </style>
+</head>
+<body>
+<button onclick="desplegarlista('reticula')">Reticula</button>
+<button onclick="desplegarlista('lista')">Lista</button>
+
+
+    <ul id="milista" class="lista">
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores possimus laudantium? Nam.</p>
+        </li>
+        <li>
+            <img src="img/001.jpg" alt="">
+            <h2>Nombre ALumno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti beatae numquam similique dicta fugiat! Quis doloribus tempore nam fugit in, doloremque corporis repudiandae, ratione, animi maiores possimus laudantium? Nam.</p>
+        </li>
+    </ul>
+    <script>
+
+        function desplegarlista(miparametro){
+
+            document.getElementById('milista').className = miparametro;
+        }
+    
+    </script>
+</body>
+</html>

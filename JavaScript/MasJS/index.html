@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="hello"></div>
+    <script>
+        function aleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+
+        function decirhola(nombrepersona) {
+            //  var nombrepersona = "Juanito";
+            var saludos = [
+                "hola",
+                "eeehhh",
+                "hello",
+                "buenos días",
+                "bienvenido",
+                "¿qué tal?"
+            ];
+            alert(saludos[aleatorio(0, 5)] + " " + nombrepersona);
+        }
+        //alert(Math.ceil(Math.random(1) * 10));
+
+        decirhola(aleatorio(0,1234));
+        decirhola('Rosi');
+        decirhola('Joaquín');
+        decirhola('Nelly');
+        decirhola('Jose');
+        decirhola('Juan');
+    </script>
+
+
+
+</body>
+
+</html>

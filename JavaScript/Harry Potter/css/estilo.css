@@ -1,0 +1,17 @@
+body{max-width: 550px; margin: 0 auto;}
+
+a{ display: inline-block; background: #ffff3396; padding:6px; border-radius:12px; margin: 5px; font-family: sans-serif; cursor:pointer}
+a:hover{background:red; color: white;}
+a:active{background: black; color: white;}
+
+img{ display: block; width: 100%;}
+
+#miImagen{
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+#lista__personajes{position: absolute; bottom: 0;}
+
+

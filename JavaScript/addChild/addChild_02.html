@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="miBoton" onclick="addElement()">Añadir</button>
+
+    <ul id="myList">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+    </ul>
+
+    <script>
+        var miArray = [
+            'valor 0',
+            'valor 1',
+            'valor 2',
+            'valor 3',
+            'valor 4',
+            'valor 5 (ultimo)'
+        ]
+
+        var numValor = 0;
+
+        function addElement() {
+            if (numValor<miArray.length) {
+                var node = document.createElement("li");
+                var textnode = document.createTextNode(miArray[numValor]);
+                node.appendChild(textnode);
+
+                document.getElementById("myList").appendChild(node);
+                numValor++;
+            }
+            else{
+                document.getElementById('miBoton').style.display="none";
+            }
+        }
+    </script>
+</body>
+
+</html>

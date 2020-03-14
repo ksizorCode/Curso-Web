@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var personajes =['Harry', 'Hermione', 'Ron', 'Voldemort','Dumbledore'];
+
+        var miTexto="<ul>";
+            for(var i = 0; i<personajes.length; i++){
+                miTexto+="<li>"+personajes[i]+"</li>";
+            }
+        miTexto+="</ul>"
+
+
+           document.getElementById('demo').innerHTML=miTexto; 
+
+    </script>
+</body>
+</html>

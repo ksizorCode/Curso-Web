@@ -1,0 +1,4 @@
+Pautas básicas para programar:
+-Revisar cada línea de código (comprobar cada cosa que haces y no dar por sentado ¡NADA!)
+-Asegurarnos de que cada paso que damos lo damos de forma rotunda.
+-

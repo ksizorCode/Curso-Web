@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <div id="cosa"></div>
+
+<script>
+
+    // esto es un array
+    var mascotas = ["perro", "gato", "tortuga","hamster","tamagochi"];
+    var bichu=7;
+
+    mascotas[5]="Araña";
+    mascotas[6]="Colibrí";
+    mascotas[7]="Jabalí";
+
+    var t= mascotas[0]+"_"+mascotas[1]+"_"+mascotas[2]+"_"+mascotas[3]+".";
+
+    var totales=mascotas.length;
+    var ultimoBichu=totales-1;
+    document.getElementById("cosa").innerHTML=mascotas[ultimoBichu];
+// document.getElementById("cosa").innerHTML=mascotas[mascotas.length-1];
+</script>
+
+</body>
+</html>

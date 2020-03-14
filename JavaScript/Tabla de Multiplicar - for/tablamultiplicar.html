@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button onclick="multiplicar()">¡MULTIPLICA!</button>
+
+    <ul id="tablamultiplicar">
+
+        <li></li>
+
+
+
+
+
+    </ul>
+
+    <script>
+    var multiplicando=2;
+    var multiplicador=5;
+
+    function multiplicar(){
+
+        var resultado=multiplicando +" x " +multiplicador+ " = "+multiplicando*multiplicador;
+        var miHTML= "<li>"+resultado+"</li>";
+        document.getElementById("tablamultiplicar").innerHTML=miHTML;
+       //alert(miHTML)
+       
+    }
+    
+    </script>
+
+
+</body>
+
+</html>

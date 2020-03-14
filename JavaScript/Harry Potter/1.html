@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+ <img id="miImagen" src="" />
+ <nav id="lista__personajes">
+ <a onclick="cargaImg('Harry.jpg')">Harry Potter</a>
+ <a onclick="cargaImg('Hermione.jpg')">Hermione Granger</a>
+ <a onclick="cargaImg('Ron.jpg')">Ron Wesley</a>
+ <a onclick="cargaImg('Dumbledore.jpg')">Dumbledore</a>
+ <a onclick="cargaImg('Hagrid.jpg')">Hagrid </a>
+ 
+</nav>
+
+</body><script>
+/* Esto en el apartado JS de Codepen */
+
+function cargaImg(archivo){
+    document.getElementById("miImagen").src='img/'+archivo;
+}
+cargaImg('Harry.jpg')
+
+
+
+</script>
+</html>

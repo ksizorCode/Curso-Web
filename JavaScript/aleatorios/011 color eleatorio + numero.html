@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java</title>
+</head>
+
+<body>
+
+    <h1 id="mono">    </h1>
+
+    <script>
+        function aleatorio(valor){
+            var miAleatorio = Math.floor(Math.random() * valor);
+            return miAleatorio;
+        }
+        function saludar() {
+            var saludos = [
+                /* 0 */ "#FF0000",
+                /* 1 */ "#FFFF00",
+                /* 2 */ "#FF00FF",
+                /* 3 */ "#00FF00",
+                /* 4 */ "#FFFFCC"
+            ];
+            var todo=saludos.length;
+            //var aleatorio=Math.floor(Math.random() * todo); 
+            var mensaje=saludos[aleatorio(todo)];
+           return(mensaje);
+        }
+        //alert(saludar());
+
+        function locura(){
+            document.getElementById("mono").innerHTML=saludar() + "numerin:" +aleatorio(1000);
+            document.getElementById("mono").style.background=saludar();
+            document.getElementById("mono").style.fontSize=aleatorio(50)+"px";
+            document.body.style.background=saludar();
+        }
+
+        setInterval('locura()',2000);
+
+
+    </script>
+
+</body>
+
+</html>

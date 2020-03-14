@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="caja">micaja</div>
+
+
+    <script>
+        function aleatorio(maximo){
+            var cantidad = Math.floor(Math.random()*maximo);
+            return cantidad;
+        }
+
+        function colorear(){
+            var colores = [
+                'cyan',
+                '#FF0000',
+                'rgba(255,43,129,0.4)',
+                '#F88',
+                'purple',
+                'orange',
+                'silver',
+                'olive',
+                'grey',
+                'crimson',
+                'maroon',
+                'pink'];
+
+            return(colores[aleatorio(colores.length)]);
+        }
+
+
+
+        function tipografiar(){
+            var fuentes = [
+                'Arial',
+                'Arial Black',
+                'Arial Narrow',
+                'Times',
+                'Times New Roman',
+                'Comic Sans MS'];
+
+            return(fuentes[aleatorio(fuentes.length)]);
+        }
+
+
+        
+function lanzar(){
+        var micolor=colorear();
+        document.getElementById('caja').innerHTML=micolor;
+        document.getElementById('caja').style.background=micolor;
+        document.getElementById('caja').style.width=(aleatorio(150)+50)+"px";
+        document.getElementById('caja').style.height=(aleatorio(150)+50)+"px";
+        document.getElementById('caja').style.borderRadius=aleatorio(150)+"px";
+        document.getElementById('caja').style.borderColor=colorear();
+        document.getElementById('caja').style.borderWidth=aleatorio(50)+'px';
+        document.getElementById('caja').style.borderStyle="solid";
+        
+
+        document.getElementById('caja').style.fontSize=aleatorio(150)+"px";
+        document.getElementById('caja').style.fontFamily=tipografiar();
+        document.getElementById('caja').style.color=colorear();
+
+}
+
+setInterval('lanzar()',1000);
+
+    </script>
+</body>
+</html>

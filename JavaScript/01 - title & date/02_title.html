@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Get Text Input Field Value in JavaScript</title>
+</head>
+<body>
+    <input type="text" placeholder="Teclea algo aquí..." id="miValor">
+    <button type="button" onclick="lanzar();">Camibar Título de la página</button>
+    
+    <script>
+        function lanzar(){
+            // Recoge el valor del input
+            var textoAlert = document.getElementById("miValor").value;
+            
+            // Muestra el texto en el Alert
+            alert(textoAlert);
+            document.title=textoAlert;
+        }
+    </script>
+</body>
+</html>

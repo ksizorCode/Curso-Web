@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Sala de Cine</title>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+  <body>
+      
+   <div class="container"> 
+    <div id="peli"> </div>
+</div>
+
+<script>
+// <img src="http://es.web.img3.acsta.net/r_1280_720/medias/nmedia/18/68/20/31/19014733.jpg"/>
+// <a href="https://disney.es" target="_blank"> El Rey León </a> - Sala 4
+
+//Valores en variables:
+var np ="El Rey León";
+var sala="Sala 4";
+var url="https://disney.es";
+var cartel="http://es.web.img3.acsta.net/r_1280_720/medias/nmedia/18/68/20/31/19014733.jpg";
+
+// Programación
+var mitexto='<img src="'+cartel+'"/><a href="' + url + '" target="_blank">' + np +  '</a> - '+sala;
+
+//Imprimir HTML
+document.getElementById("peli").innerHTML=mitexto;
+
+</script>
+
+  </body>
+</html>

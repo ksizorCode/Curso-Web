@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    #imagen{width:auto; height: 80vh;}
+    </style>
+</head>
+<body>
+    <h1>Imagenes Aleatorias</h1>
+    <img id="imagen" src=""/>
+
+
+    <script>
+        function aleatorio(maximo){
+            var cantidad = Math.floor(Math.random()*maximo);
+            return cantidad;
+        }
+
+        function hex(){
+            var mihex = [
+            '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+            return(mihex[aleatorio(mihex.length)]);
+        }
+
+        function cargaimagen(){
+            var imagenes = [
+            'amelie.jpg',
+            'br.jpg',
+            'jaws.jpg',
+            'rd.jpg',
+            'volver.jpg'];
+            return(imagenes[aleatorio(imagenes.length)]);
+        }
+
+
+        
+function lanzar(){
+        
+        var micolorfondo="#"+hex()+hex()+hex()+hex()+hex()+hex();
+       // var micolor="rgba("+aleatorio(255)+","+aleatorio(255)+","+aleatorio(255)+",0."+(aleatorio(100)+1)+")"
+       var micolor="rgba("+aleatorio(255)+","+aleatorio(255)+","+aleatorio(255)+",0."+(aleatorio(100)+1)+")"
+
+       
+
+        document.body.style.background=micolorfondo;
+
+        document.getElementById('imagen').src="img/"+cargaimagen();
+
+
+
+}
+
+setInterval('lanzar()',1000);
+
+    </script>
+</body>
+</html>
