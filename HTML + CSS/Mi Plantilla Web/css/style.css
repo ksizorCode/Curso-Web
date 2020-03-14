@@ -1,0 +1,32 @@
+body{
+    color:red;
+    font-family: sans-serif;
+    width: 540px;
+    margin: 0 auto;
+}
+
+a{
+    color: brown;
+    background: yellow;
+    text-decoration: none;
+}
+
+img{width: 100%;}
+
+li{
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background:yellow;
+    padding: 20px;
+    margin: 2px;
+    float: left;
+}
+
+.azulin{background: cyan;}
+.rojin{background: crimson; color:white}
+.verdin{background: lime; color:black}
+.naranja{background: orange;}
+
+.bordezucu{ border: solid black 5px;}
+.bordecillo{ border: dotted orange 10px;}

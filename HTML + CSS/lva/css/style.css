@@ -1,0 +1,71 @@
+body {
+    max-width: 550px;
+    margin: 10px auto;
+   font-family: sans-serif;
+}
+
+h1 {
+    background: red;
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 44px;
+    background: grey;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+    float: left;
+    width: 33%;
+    height: 100px;
+}
+
+img {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 800px) {
+    body {
+      background-color: yellow;
+    }
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: red;
+    }
+
+    h1{ font-size: 22px;}
+    li{ width: 100%; height: 140px;}
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+
+  @media only screen and (max-width: 300px) {
+    body {
+      background-color: pink;
+    }
+  }

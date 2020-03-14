@@ -1,0 +1,40 @@
+body{ 
+    background: url(../img/mesa.jpg);
+    background-size: cover;
+    margin-left: 420px;
+    margin-top: 100px;
+    
+    
+}
+table{
+    margin: 30px;
+    background: white;
+}
+table td{
+    border: grey solid 1px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition:0.7s;
+}
+.n{background-color: black;}
+
+ td:hover{
+     background-color: rgb(192, 82, 128);
+     border: red solid 1px;
+     border-radius: 5px;
+     width: 5px;
+     transform: scale(1.5);
+ }
+ td:active{
+     transform: scale(1.5);
+ }
+ .m:active{
+     background: yellow url(../img/rayman.png)center center;
+     background-size: cover;
+
+ }
+ 
+ table:hover{
+     opacity: 0.9;
+ }

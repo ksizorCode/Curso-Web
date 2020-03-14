@@ -1,0 +1,17 @@
+body{
+    background: yellow;
+    max-width: 550px;  /* tamaño máximo 550px */
+    min-width: 230px;  /* tamaño mínimo 230px */
+    margin: 10px auto; /* margin: X auto ; +width= página centrada */
+    font-family: sans-serif;
+}
+img{
+    width: 100%;
+    border:solid white 10px;
+    margin: 15px 0;
+    box-shadow: 3px 5px 8px 8px rgba(0,0,0,0.3);
+}
+img:hover{
+    border-color: red;
+    transform: scale(1.1);
+}

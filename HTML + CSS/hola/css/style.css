@@ -1,0 +1,23 @@
+div{
+ border: solid red 2px;
+ padding: 5px;
+ margin: 5px;
+}
+
+body{ width: 450px; margin: 0 auto; font-family: sans-serif;}
+
+#cabecera{ background: yellow;}
+#principal{background: orange; overflow:hidden;}
+#colgrande{background: red; width:70%; float:left;}
+#colpeque{background: lightgreen; width:18%; float:right;}
+#pie{background: cyan; text-align: center;}
+
+
+#cabecera{overflow:hidden;}
+#cabecera h2{ width: 120px; float:left; }
+#cabecera nav{ width:170px; float:right;}
+
+#cabecera nav li{
+ list-style:none; display:inline; }
+
+#cabecera nav{margin-top:10px;}
